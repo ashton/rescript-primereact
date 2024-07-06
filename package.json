@@ -10,7 +10,7 @@
     "component-library"
   ],
   "homepage": "https://github.com/ashton/rescript-primereact",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "res:build": "rescript",
