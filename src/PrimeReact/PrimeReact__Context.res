@@ -6,5 +6,5 @@ module Provider = {
   }
 
   @module("primereact/api") @react.component(: providerProps)
-  external make: providerProps => React.element = "default"
+  external make: providerProps => React.element = "PrimeReactProvider"
 }
