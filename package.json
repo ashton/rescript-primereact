@@ -1,0 +1,28 @@
+{
+  "name": "rescript-primereact",
+  "description": "Rescript bindings for PrimeReact component library.",
+  "keywords": [
+    "rescript",
+    "bindings",
+    "rescript-bindings",
+    "react",
+    "ui-library",
+    "component-library"
+  ],
+  "homepage": "https://github.com/ashton/rescript-primereact",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript -w"
+  },
+  "dependencies": {
+    "@rescript/core": "^1.5.2",
+    "@rescript/react": "^0.12.1",
+    "primereact": "^10.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rescript": "^11.1.2"
+  }
+}
