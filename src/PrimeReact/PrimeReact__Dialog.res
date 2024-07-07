@@ -42,17 +42,17 @@ type componentProps = {
   //transitionOptions
   unstyled?: bool,
   visible?: bool,
-  onClick: ReactEvent.Pointer.t => unit,
-  onDrag: ReactEvent.Mouse.t => unit,
-  onDragEnd: ReactEvent.Mouse.t => unit,
-  onDragStart: ReactEvent.Mouse.t => unit,
-  onHide: string => unit,
-  onMaskClick: ReactEvent.Mouse.t => unit,
-  onMaximize: dialogMaximizeEvent => unit,
-  onResize: ReactEvent.Mouse.t => unit,
-  onResizeEnd: ReactEvent.Mouse.t => unit,
-  onResizeStart: ReactEvent.Mouse.t => unit,
-  onShow: unit => unit,
+  onClick?: ReactEvent.Pointer.t => unit,
+  onDrag?: ReactEvent.Mouse.t => unit,
+  onDragEnd?: ReactEvent.Mouse.t => unit,
+  onDragStart?: ReactEvent.Mouse.t => unit,
+  onHide?: string => unit,
+  onMaskClick?: ReactEvent.Mouse.t => unit,
+  onMaximize?: dialogMaximizeEvent => unit,
+  onResize?: ReactEvent.Mouse.t => unit,
+  onResizeEnd?: ReactEvent.Mouse.t => unit,
+  onResizeStart?: ReactEvent.Mouse.t => unit,
+  onShow?: unit => unit,
 }
 
 @module("primereact/dialog") @react.component(: componentProps)

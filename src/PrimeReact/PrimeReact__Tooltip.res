@@ -35,10 +35,10 @@ module Tooltip = {
     target?: target,
     unstyled?: bool,
     updateDelay?: int,
-    onBeforeHide: tooltipEvent => unit,
-    onBeforeShow: tooltipEvent => unit,
-    onHide: tooltipEvent => unit,
-    onShow: tooltipEvent => unit,
+    onBeforeHide?: tooltipEvent => unit,
+    onBeforeShow?: tooltipEvent => unit,
+    onHide?: tooltipEvent => unit,
+    onShow?: tooltipEvent => unit,
   }
 
   @module("primereact/tooltip") @react.component(: componentProps)

@@ -19,8 +19,8 @@ and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
 
 type componentProps = {
   children?: React.element,
-  home: menuItem,
-  model: array<menuItem>,
+  home?: menuItem,
+  model?: array<menuItem>,
   //separatorIcon
   unstyled?: bool,
 }

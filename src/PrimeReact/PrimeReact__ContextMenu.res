@@ -11,26 +11,26 @@ module ContextMenu = {
     target?: string,
     separator?: bool,
     //style
-    className: string,
-    template: React.element,
-    data: string,
+    className?: string,
+    template?: React.element,
+    data?: string,
   }
 
   and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
 
   type componentProps = {
-    ariaLabel: string,
-    ariaLabelledBy: string,
-    autoZIndex: bool,
-    baseZIndex: int,
-    breakpoint: string,
-    children: React.element,
-    global: bool,
-    model: array<menuItem>,
-    scrollHeight: string,
-    unstyled: bool,
-    onHide: ReactEvent.Synthetic.t => unit,
-    onShow: ReactEvent.Synthetic.t => unit,
+    ariaLabel?: string,
+    ariaLabelledBy?: string,
+    autoZIndex?: bool,
+    baseZIndex?: int,
+    breakpoint?: string,
+    children?: React.element,
+    global?: bool,
+    model?: array<menuItem>,
+    scrollHeight?: string,
+    unstyled?: bool,
+    onHide?: ReactEvent.Synthetic.t => unit,
+    onShow?: ReactEvent.Synthetic.t => unit,
   }
 
   @module("primereact/contextmenu") @react.component(: componentProps)

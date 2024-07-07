@@ -13,9 +13,9 @@ type rec menuItem = {
   target?: string,
   separator?: bool,
   //style
-  className: string,
-  template: React.element,
-  data: string,
+  className?: string,
+  template?: React.element,
+  data?: string,
 }
 
 and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
@@ -32,18 +32,18 @@ type componentProps = {
   mask?: bool,
   maskClassName?: string,
   //    maskStyle?: string,
-  model: array<menuItem>,
-  radius: int,
-  rotateAnimation: bool,
+  model?: array<menuItem>,
+  radius?: int,
+  rotateAnimation?: bool,
   //showIcon
-  transitionDelay: int,
-  _type: form,
-  unstyled: bool,
-  visible: bool,
-  onClick: ReactEvent.Mouse.t => unit,
-  onHide: ReactEvent.Synthetic.t => unit,
-  onShow: ReactEvent.Synthetic.t => unit,
-  onVisibleChange: bool => unit,
+  transitionDelay?: int,
+  @as("type") _type?: form,
+  unstyled?: bool,
+  visible?: bool,
+  onClick?: ReactEvent.Mouse.t => unit,
+  onHide?: ReactEvent.Synthetic.t => unit,
+  onShow?: ReactEvent.Synthetic.t => unit,
+  onVisibleChange?: bool => unit,
 }
 
 @module("primereact/speeddial") @react.component(: componentProps)

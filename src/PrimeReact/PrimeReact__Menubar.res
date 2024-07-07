@@ -10,25 +10,25 @@ type rec menuItem = {
   target?: string,
   separator?: bool,
   //style
-  className: string,
-  template: React.element,
-  data: string,
+  className?: string,
+  template?: React.element,
+  data?: string,
 }
 
 and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
 
 type componentProps = {
-  ariaLabel: string,
-  ariaLabelledBy: string,
-  children: React.element,
-  end: React.element,
+  ariaLabel?: string,
+  ariaLabelledBy?: string,
+  children?: React.element,
+  end?: React.element,
   // menuIcon
-  model: array<menuItem>,
-  start: React.element,
+  model?: array<menuItem>,
+  start?: React.element,
   // submenuIcon
-  unstyled: bool,
-  onBlur: ReactEvent.Focus.t => unit,
-  onFocus: ReactEvent.Focus.t => unit,
+  unstyled?: bool,
+  onBlur?: ReactEvent.Focus.t => unit,
+  onFocus?: ReactEvent.Focus.t => unit,
 }
 
 @module("primereact/menubar") @react.component(: componentProps)

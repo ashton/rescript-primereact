@@ -3,8 +3,8 @@ type changeEvent<'value> = {
   checked: bool,
   originalEvent: ReactEvent.Form.t,
 }
-type selectEvent<'value> = {value: 'value, originalEvent: ReactEvent.Form.t}
-type unselectEvent<'value> = {value: 'value, originalEvent: ReactEvent.Form.t}
+type selectEvent<'value> = {value: 'value, originalEvent: ReactEvent.Synthetic.t}
+type unselectEvent<'value> = {value: 'value, originalEvent: ReactEvent.Synthetic.t}
 type dropdownClickEvent = {query: string}
 type completeEvent = {query: string}
 
@@ -60,25 +60,25 @@ type componentProps<'value> = {
   //transitionOptions
   _type?: string,
   unstyled?: bool,
-  value: 'value,
-  variant: variant,
+  value?: 'value,
+  variant?: variant,
   //callbacks
-  completeMethod: completeEvent => unit,
-  onBlur: ReactEvent.Focus.t => unit,
-  onChange: onChangeEvent<'value> => unit,
-  onClear: unit => unit,
-  onClick: ReactEvent.Mouse.t => unit,
-  onContextMenu: ReactEvent.Mouse.t => unit,
-  onDbClick: ReactEvent.Mouse.t => unit,
-  onDropDownClick: ReactEvent.Mouse.t => unit,
-  onFocus: ReactEvent.Focus.t => unit,
-  onHide: unit => unit,
-  onKeyPress: ReactEvent.Keyboard.t => unit,
-  onKeyUp: ReactEvent.Keyboard.t => unit,
-  onMouseDown: ReactEvent.Mouse.t => unit,
-  onSelect: selectEvent<'value> => unit,
-  onShow: unit => unit,
-  onUnselect: unselectEvent<'value> => unit,
+  completeMethod?: completeEvent => unit,
+  onBlur?: ReactEvent.Focus.t => unit,
+  onChange?: onChangeEvent<'value> => unit,
+  onClear?: unit => unit,
+  onClick?: ReactEvent.Mouse.t => unit,
+  onContextMenu?: ReactEvent.Mouse.t => unit,
+  onDbClick?: ReactEvent.Mouse.t => unit,
+  onDropDownClick?: ReactEvent.Mouse.t => unit,
+  onFocus?: ReactEvent.Focus.t => unit,
+  onHide?: unit => unit,
+  onKeyPress?: ReactEvent.Keyboard.t => unit,
+  onKeyUp?: ReactEvent.Keyboard.t => unit,
+  onMouseDown?: ReactEvent.Mouse.t => unit,
+  onSelect?: selectEvent<'value> => unit,
+  onShow?: unit => unit,
+  onUnselect?: unselectEvent<'value> => unit,
 }
 
 @module("primereact/autocomplete") @react.component(: componentProps<'value>)
