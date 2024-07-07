@@ -1,25 +1,6 @@
 type direction = Left | Right | Up | Down | UpLeft | UpRight | DownLeft | DownRight
 type form = Linear | Circle | SemiCircle | QuarterCircle
 
-type rec menuItem = {
-  id?: string,
-  label?: string,
-  icon?: React.element,
-  url?: string,
-  items: menuItems,
-  expanded?: bool,
-  disabled?: bool,
-  visible?: bool,
-  target?: string,
-  separator?: bool,
-  //style
-  className?: string,
-  template?: React.element,
-  data?: string,
-}
-
-and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
-
 type componentProps = {
   buttonClassName?: string,
   //buttonStyle
@@ -32,7 +13,7 @@ type componentProps = {
   mask?: bool,
   maskClassName?: string,
   //    maskStyle?: string,
-  model?: array<menuItem>,
+  model?: array<PrimeReact__MenuItem.t>,
   radius?: int,
   rotateAnimation?: bool,
   //showIcon

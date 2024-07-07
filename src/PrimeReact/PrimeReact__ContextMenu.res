@@ -1,23 +1,4 @@
 module ContextMenu = {
-  type rec menuItem = {
-    id?: string,
-    label?: string,
-    icon?: React.element,
-    url?: string,
-    items: menuItems,
-    expanded?: bool,
-    disabled?: bool,
-    visible?: bool,
-    target?: string,
-    separator?: bool,
-    //style
-    className?: string,
-    template?: React.element,
-    data?: string,
-  }
-
-  and menuItems = ShallowMenu(array<menuItem>) | DeepMenu(array<array<menuItem>>)
-
   type componentProps = {
     ariaLabel?: string,
     ariaLabelledBy?: string,
@@ -26,7 +7,7 @@ module ContextMenu = {
     breakpoint?: string,
     children?: React.element,
     global?: bool,
-    model?: array<menuItem>,
+    model?: array<PrimeReact__MenuItem.t>,
     scrollHeight?: string,
     unstyled?: bool,
     onHide?: ReactEvent.Synthetic.t => unit,
